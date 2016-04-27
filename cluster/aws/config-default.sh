@@ -63,6 +63,11 @@ DOCKER_STORAGE=${DOCKER_STORAGE:-aufs}
 # Extra docker options for nodes.
 EXTRA_DOCKER_OPTS="${EXTRA_DOCKER_OPTS:-}"
 
+# Optional: Set KUBE_AWS_INSTANCE_PREFIX to provision a new kubernetes cluster
+# Defaults to kubernetes
+# This would create a cluster on a new vpc
+# KUBE_AWS_INSTANCE_PREFIX="kubernetes-production"
+
 INSTANCE_PREFIX="${KUBE_AWS_INSTANCE_PREFIX:-kubernetes}"
 CLUSTER_ID=${INSTANCE_PREFIX}
 AWS_SSH_KEY=${AWS_SSH_KEY:-$HOME/.ssh/kube_aws_rsa}
